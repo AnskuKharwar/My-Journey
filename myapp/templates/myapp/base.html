@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}?v=2">
+    {% comment %} <script src="{% static 'myapp/script.js' %}" defer></script> {% endcomment %}
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>Welcome to My Site!</h1>
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About Me</a></li>
+      <li><a href="{% url 'skills' %}">Skills</a></li>
+      <li><a href="{% url 'contact' %}">Contact Me</a></li>
+    </ul>
+  </div>
+
+<!-- Page Content -->
+
+  {% block content %}{% endblock %}
+
+  <!-- Footer -->
+  <footer id="cpfooter">
+      <div class="footer-container">
+          <p>© 2025 Anshu Kumar Kharwar | All Rights Reserved</p>
+          <p>Made with ❤️ in Uttar Pradesh</p>
+          <div class="social-links">
+              <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+              <a href="https://www.linkedin.com/in/anshu-kumar-kharwar-546974221" target="_blank">LinkedIn</a>
+              <a href="mailto:kharwaranshukumar@gmail.com">Email</a>
+              <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=mev41gl" target="_blank">Instagram</a>
+          </div>
+      </div>
+  </footer>
+
+</body>
+</html>
+

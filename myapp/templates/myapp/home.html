@@ -1,0 +1,71 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Home - My Journey{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section style="padding: 60px 0; text-align: center; background: linear-gradient(135deg, #e0f7fa, #399d5aff);">
+    <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Hi, I’m <span style="color:#00796b;">Anshu kumar Kharwar</span></h1>
+    <h3 style="color: #555;">A Student | Learner | Future Software Engineer</h3>
+    <p style="font-size: 1.1rem; margin-top: 10px;">Every day is a step towards my dream.</p>
+    <a href="#journey" style="display:inline-block; margin-top:20px; padding:10px 20px; background:#00796b; color:white; text-decoration:none; border-radius:5px;">Explore My Journey</a>
+</section>
+
+<!-- Life Snapshot -->
+<section style="padding: 50px 0; text-align: center;">
+    <h2>My Current Life</h2>
+    <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:20px; margin-top:30px;">
+        <div style="flex:1; min-width:200px; background:#f5f5f5; padding:20px; border-radius:10px;">
+            📚 <h3>Studying</h3>
+            <p>Pursuing BCA at Shree Ram Mulkh Institute Of Engineering & Technology, Ambala Haryana</p>
+        </div>
+        <div style="flex:1; min-width:200px; background:#f5f5f5; padding:20px; border-radius:10px;">
+            💻 <h3>Learning Skills</h3>
+            <p>Python, Django, Web Development, etc.</p>
+        </div>
+        <div style="flex:1; min-width:200px; background:#f5f5f5; padding:20px; border-radius:10px;">
+            🎯 <h3>Goal</h3>
+            <p>Internship / Job in [It Sector]</p>
+        </div>
+        <div style="flex:1; min-width:200px; background:#f5f5f5; padding:20px; border-radius:10px;">
+            🌱 <h3>Hobbies</h3>
+            <p>Reading, Writing, Exploring Tech</p>
+        </div>
+    </div>
+</section>
+
+<!-- My Journey Timeline -->
+<section id="journey" style="padding: 50px 20px; background: #e3f2fd;">
+    <h2 style="text-align:center;">My Journey</h2>
+    <ul style="max-width:600px; margin:auto; list-style:none; padding:0;">
+        <li style="margin:20px 0; padding:15px; background:white; border-left:5px solid #00796b;">
+            <strong>2023 - School Graduation:</strong> Completed my school with focus on science.
+        </li>
+        <li style="margin:20px 0; padding:15px; background:white; border-left:5px solid #00796b;">
+            <strong>2025 - Present:</strong> Pursuing BCA in [Web Development].
+        </li>
+        <li style="margin:20px 0; padding:15px; background:white; border-left:5px solid #00796b;">
+            <strong>2025 - Skills:</strong> Learned Python, HTML, CSS, JavaScript, Django.
+        </li>
+        <li style="margin:20px 0; padding:15px; background:white; border-left:5px solid #00796b;">
+            <strong>Future:</strong> Work in Google where I can grow and create impact.
+        </li>
+    </ul>
+</section>
+
+<!-- Motivation -->
+<section style="padding: 50px; text-align: center;">
+    <blockquote style="font-size: 1.5rem; font-style: italic; color: #444;">
+        "I’m not waiting for the right opportunity, I’m preparing for it."
+    </blockquote>
+</section>
+
+<!-- Call to Action -->
+<section style="padding: 50px; text-align: center; background: #f1f8e9;">
+    <h2>Want to Know More?</h2>
+    <a href="{% url 'about' %}" style="margin:10px; padding:10px 20px; background:#00796b; color:white; text-decoration:none; border-radius:5px;">About Me</a>
+    <a href="{% url 'contact' %}" style="margin:10px; padding:10px 20px; background:#ff9800; color:white; text-decoration:none; border-radius:5px;">Contact Me</a>
+</section>
+
+{% endblock %}
