@@ -5,45 +5,44 @@ body {  /* myapp/static/myapp/style.css */
   padding: 0;
 }
 
-
 h1 {
     text-align: center;
     color: white;
 }
 
-/* header {
-  background: #021b8a;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-section {
-  margin: 20px;
-  padding: 10px;
-  background: #cdccdc;
-} */
-
-
+/* Navbar */
 .navbar {
   background: #1e3f70;
-  padding: 20px;
+  padding: 15px 20px;
 }
 .navbar ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Center align */
+  gap: 30px; /* space between items */
 }
 .navbar a {
   color: white;
   text-decoration: none;
-  margin: 100px;
   font-size: medium;
+  padding: 8px 12px;
+  transition: background 0.3s ease;
+}
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
 }
 
-
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
 
 /* Contact Page Styling */
 .contact-container {
@@ -117,8 +116,6 @@ section {
 .btn-submit:hover {
     background: #43a047;
 }
-
-
 
 /* Footer Styling */
 #cpfooter {

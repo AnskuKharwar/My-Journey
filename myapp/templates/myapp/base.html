@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>{% block title %}My Site{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'myapp/style.css' %}?v=2">
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}?v=3">
     {% comment %} <script src="{% static 'myapp/script.js' %}" defer></script> {% endcomment %}
 </head>
 <body>
@@ -17,8 +17,6 @@
       <li><a href="{% url 'contact' %}">Contact Me</a></li>
     </ul>
   </div>
-
-<!-- Page Content -->
 
   {% block content %}{% endblock %}
 
@@ -35,7 +33,6 @@
           </div>
       </div>
   </footer>
-
 </body>
 </html>
 
